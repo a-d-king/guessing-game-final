@@ -3,19 +3,54 @@
 
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Guessing Game</title>
     <link rel="stylesheet" href="main.css">
-    <!-- the MAIN.CSS file is linked here -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
   </head>
 
   <body>
+    <div id='app' class='center container'>
 
+    <div id='headers'>
+      <h1 id='title' class='center'>¿ Guessing Game ?</h1>
+      <h3 id='subtitle' class='center'>Guess a number between 1-100!</h3>
+    </div>
 
+        <div id='guess-feedback' class='center'>
+          <!-- list where guesses will appear -->
+            <ul id='guess-list'>
+              <li class='guess'>-</li>
+              <li class='guess'>-</li>
+              <li class='guess'>-</li>
+              <li class='guess'>-</li>
+              <li class='guess'>-</li>
+            </ul>
+          </div>
 
+        <div id='menu-btns'>
+          <!-- all buttons for game play below -->
+          <input id='input', placeholder='Enter Guess Here' maxlength='3' autofocus=autofocus></input>
+          <button type='button' id='submit-guess-btn'>Submit</button>
+          <button type='button' id='reset-btn'>Reset Game</button>
+          <button id='hint-btn'>Get A Hint</button>
+        </div>
 
+        <div id='footer' class='center'>
+          <div class='row logo'>
+            <h4 id='author'>by Adam King</h4>
+            <a href='https://github.com/a-d-king?tab=repositories'><img src='img/github.svg' id='github'></a>
+            <img src='img/fa-logo@2x.png' id='fullstack'></img>
+          </div>
+        </div>
 
-    <!-- <script src='js/guessing-game.js'></script> -->
-    <!-- uncomment the script tag above when you are ready to add JavaScript to your document -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src='http://use.edgefonts.net/butcherman.js'></script>
+    <script src='js/guessing-game.js'></script>
   </body>
 
 </html>
