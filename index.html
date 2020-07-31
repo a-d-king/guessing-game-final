@@ -10,33 +10,33 @@
   </head>
 
   <body>
-    <div id='app' class='center container'>
+    <div id='app' class='cener container overlay'>
 
-    <div id='headers'>
-      <h1 id='title' class='center'>¿ Guessing Game ?</h1>
+    <div class='headers'>
+      <h1 id='title' class='center'>Guessing Game</h1>
       <h3 id='subtitle' class='center'>Guess a number between 1-100!</h3>
     </div>
 
         <div id='guess-feedback' class='center'>
           <!-- list where guesses will appear -->
             <ul id='guess-list'>
-              <li class='guess'>-</li>
-              <li class='guess'>-</li>
-              <li class='guess'>-</li>
-              <li class='guess'>-</li>
-              <li class='guess'>-</li>
+              <li class='guess'>?</li>
+              <li class='guess'>?</li>
+              <li class='guess'>?</li>
+              <li class='guess'>?</li>
+              <li class='guess'>?</li>
             </ul>
           </div>
 
         <div id='menu-btns'>
           <!-- all buttons for game play below -->
-          <input id='input', placeholder='Enter Guess Here' maxlength='3' autofocus=autofocus></input>
+          <input id='input', placeholder='Enter Guess' maxlength='3' autofocus=autofocus></input>
           <button type='button' id='submit-guess-btn'>Submit</button>
-          <button type='button' id='reset-btn'>Reset Game</button>
-          <button id='hint-btn'>Get A Hint</button>
+          <button type='button' id='reset-btn'>Reset</button>
+          <button id='hint-btn'>Hint</button>
         </div>
 
-        <div id='footer' class='center'>
+        <div id='footer'>
           <div class='row logo'>
             <h4 id='author'>by Adam King</h4>
             <a href='https://github.com/a-d-king?tab=repositories'><img src='img/github.svg' id='github'></a>

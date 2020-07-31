@@ -1,110 +1,48 @@
 
 @import url(https://fonts.googleapis.com/css?family=Denk+One);
 
+/* Main Body & Static Graphics */
+
 body {
-    background: url(img/riddler.jpg) no-repeat center center fixed;
-    background-size: cover;
-    background-position: bottom;
-    letter-spacing: 2px;
-    margin-top: 40px;
+  background-color: lightgrey;
+  font-family: 'Denk One', sans-serif;
+  text-shadow: 2x 2x 5px rgba(0,0,0,0.5);
+  color: black;
 }
 
-#title {
-  color: transparent;
-  text-shadow: 0 0 5px rgba(0,0,0,0.5);
-  color: snow;
-  font-family: 'Denk One', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 3.5em;
-  text-align: center;
-  position: absolute;
-  right: 100px;
+h1 {
+  font-size: 4em;
+  margin: 40px;
+  padding-top: 25px;
 }
 
-#subtitle {
-  color: transparent;
-  text-shadow: 0 0 5px rgba(0,0,0,0.5);
-  color: snow;
-  font-family: 'Denk One', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+h3 {
   font-size: 2.5em;
+  margin-top: 20px;
+}
+
+.center {
   text-align: center;
-  position: absolute;
-  right: 100px;
-  top: 150px;
 }
 
-#guess-list {
-  color: transparent;
-  text-shadow: 0 0 5px rgba(0,0,0,0.5);
-  color: snow;
-  font-family: 'Denk One', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 2.5em;
-  text-align: center;
-  position: absolute;
-  right: 370px;
-  top: 220px;
+ul {
+  list-style: none;
+  padding: 0px;
 }
 
-.guess {
-  font-size: 20px;
-  border: 2px solid white;
-  border-spacing: 25px;
-  border-radius: 15%;
-  padding: 10px 20px;
-}
-
-input {
-    font-size: 22px;
-    font-family: Gill Sans, sans-serif;
-    text-align: center;
-    background-color: snow;
-    position: absolute;
-    right: 280px;
-    bottom: 380px;
-}
-
-#submit-guess-btn {
-    font-size: 24px;
-    font-family: Gill Sans, sans-serif;
-    text-align: center;
-    position: absolute;
-    right: 355px;
-    bottom: 330px;
-    background-color: green;
-    color: white;
-}
-
-#reset-btn {
-    font-size: 24px;
-    font-family: Gill Sans, sans-serif;
-    text-align: center;
-    position: absolute;
-    right: 255px;
-    bottom: 250px;
-    background-color: green;
-    color: white;
-}
-
-#hint-btn {
-    font-size: 24px;
-    font-family: Gill Sans, sans-serif;
-    text-align: center;
-    position: absolute;
-    right: 400px;
-    bottom: 250px;
-    background-color: green;
-    color: white;
+#app {
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 1.0px;
+  border-radius: 20%;
+  box-shadow: 0 4px 8px;
+  background-color: azure;
 }
 
 #author {
     font-size: 20px;
     font-family: Florence, cursive;
-    color: white;
     text-align: right;
     position: absolute;
     bottom: 2px;
@@ -117,6 +55,7 @@ input {
     height: auto;
     position: absolute;
     bottom: 2px;
+    left: 8px;
 }
 
 #github {
@@ -125,6 +64,79 @@ input {
     height: auto;
     position: absolute;
     bottom: 18px;
-    right: 185px;
-    background-color: white;
+    right: 160px;
+}
+
+/* Inputs, Buttons, & Guesses */
+
+.guess {
+  display: inline;
+  font-size: 50px;
+  border: 2px solid black;
+  border-radius: 20%;
+  padding: 5px 15px;
+  margin: 40px 25px;
+  box-shadow: 0 4px 8px;
+}
+
+#guess-list {
+  margin: 65px;
+}
+
+#menu-btns {
+  width: 160px;
+  margin: 35px auto 50px;
+  position: relative;
+}
+
+#input {
+  opacity: .75;
+  color: black;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 145px;
+  height: 145px;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px;
+}
+
+#submit-guess-btn {
+  border-radius: 50%;
+  border: 3px outset black;
+  background-color: forestgreen;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 22px;
+  left: 175px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px;
+}
+
+#reset-btn {
+  border-radius: 20%;
+  border: 3px outset black;
+  background-color: lightblue;
+  width: 90px;
+  height: 70px;
+  position: absolute;
+  top: 4px;
+  right: 185px;
+  font-size: 20px;
+  box-shadow: 0 4px 8px;
+}
+
+#hint-btn {
+  border-radius: 20%;
+  border: 3px outset black;
+  background-color: lightcoral;
+  width: 90px;
+  height: 70px;
+  position: absolute;
+  top: 100px;
+  right: 185px;
+  font-size: 20px;
+  box-shadow: 0 4px 8px;
 }

@@ -15,6 +15,7 @@ class Game {
     }
     playersGuessSubmission(guess) {
         if(isNaN(guess) || guess < 1 || guess > 100) {
+            $('#subtitle').text(('That is not a valid guess!'))
             throw 'Invalid Guess';
         }
         this.playersGuess = guess;
@@ -23,21 +24,21 @@ class Game {
     checkGuess() {
         if (this.playersGuess === this.winningNumber) {
             $('#submit-guess-btn, #hint-btn').prop('disabled', true);
-            $('#subtitle').text('Click Reset Game to play again!');
+            $('#title').text('Click Reset Game to play again!');
             $('input').prop('disabled', true);
-            return `You win! The winning number was ${this.winningNumber}.`
+            $('#subtitle').text(`You win! The winning number was ${this.winningNumber}.`)
         } 
         else if (this.pastGuesses.includes(this.playersGuess)) {
-            return 'You already guessed that number.';
+            $('#subtitle').text('You already guessed that number.');
         } 
         else {
             this.pastGuesses.push(this.playersGuess);
             $(`#guess-list li:nth-child(${this.pastGuesses.length})`).text(this.playersGuess);
             if(this.pastGuesses.length === 5) {
                 $('#submit-guess-btn, #hint-btn').prop('disabled', true);
-                $('#subtitle').text('Click Reset Game to play again!');
+                $('#title').text('Click Reset to play again!');
                 $('input').prop('disabled', true);
-                return `You lose. The winning number was ${this.winningNumber}.`
+                $('#subtitle').text(`You lose. The winning number was ${this.winningNumber}.`);
             }
             else {
                 let diff = this.difference()
@@ -103,13 +104,13 @@ $(document).ready(function () {
     })
     $('#hint-btn').click(function () {
         let hints = game.provideHint();
-        $('#title').text(`Winning number is either ${hints[0]}, ${hints[1]}, or ${hints[2]}.`);
+        $('#subtitle').text(`The winning number is either ${hints[0]}, ${hints[1]}, or ${hints[2]}.`);
     });
     $('#reset-btn').click(function () {
         game = newGame();
         $('#title').text('Guessing Game');
         $('#subtitle').text('Guess a number between 1-100!')
-        let text = '-';
+        let text = '?';
         $(".guess").html(text);
         $('#hint-btn, #submit-guess-btn').prop("disabled", false);
         $('#input').prop("disabled", false);
