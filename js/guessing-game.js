@@ -24,7 +24,7 @@ class Game {
     checkGuess() {
         if (this.playersGuess === this.winningNumber) {
             $('#submit-guess-btn, #hint-btn').prop('disabled', true);
-            $('#title').text('Click Reset Game to play again!');
+            $('#title').text('Click Reset to play again!');
             $('input').prop('disabled', true);
             $('#subtitle').text(`You win! The winning number was ${this.winningNumber}.`)
         } 
