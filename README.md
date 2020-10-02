@@ -1,6 +1,6 @@
 # Guessing Game #
 
-# project by Adam King #
+# Project by Adam King #
 
 An HTML/CSS/JS built guessing game. 
 Enter the number you want to submit as your guess in the input box. 
