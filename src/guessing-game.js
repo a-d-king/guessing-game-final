@@ -38,7 +38,7 @@ class Game {
                 $('#submit-guess-btn, #hint-btn').prop('disabled', true);
                 $('#title').text('Click Reset to play again!');
                 $('input').prop('disabled', true);
-                $('#subtitle').text(`You lose. The winning number was ${this.winningNumber}.`);
+                $('#subtitle').text(`You lost. The winning number was ${this.winningNumber}.`);
             }
             else {
                 let diff = this.difference()
@@ -50,7 +50,7 @@ class Game {
                 }
                 if(diff < 10) return 'You\'re red hot!';
                 if(diff < 25) return 'You\'re lukewarm.';
-                if(diff < 50) return 'You\'re a bit chilly.';
+                if(diff < 50) return 'You\'re chilly.';
                 else return 'You\'re ice cold!';
             }
         }
